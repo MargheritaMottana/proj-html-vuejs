@@ -1,0 +1,38 @@
+.btn {
+    padding: 10px 25px;
+    font-size: small;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.btn.light-orange-button {
+    color: #f86011;
+    background-color: #FFE7DA;
+
+    &:hover {
+        color: white;
+        background-color: #f86011;
+    }
+}
+
+.btn.white-button {
+    color: black;
+    background-color: #ffffff;
+
+    &:hover {
+        color: white;
+        background-color: transparent;
+        border: 2px solid white;
+    }
+}
+
+.btn.orange-button {
+    color: white;
+    background-color: #f86011;
+
+    &:hover {
+        color: #f86011;
+        background-color: transparent;
+        border: 2px solid #f86011;
+    }
+}

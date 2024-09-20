@@ -8,12 +8,12 @@
 </script>
 
 <template>
-    <header class="container">
+    <header class="container my-container">
         <ul class="nav">
             <!-- logo -->
-            <div class="nav-item p-1">
+            <a class="nav-item p-1" href="#">
                 <img class="logo" src="/public/img/avada-marketing-logo.png" alt="Avada Marketing">
-            </div>
+            </a>
 
             <!-- menu -->
             <li class="nav-item p-1">
@@ -50,7 +50,7 @@
 
             <!-- bottone finale -->
              <div class="nav-item p-1">
-                <button type="button" class="btn header-button">
+                <button type="button" class="btn header-button light-orange-button">
                     Free Quote
                 </button>
              </div>
@@ -60,4 +60,6 @@
 
 <style lang="scss">
   @use 'src/assets/scss/partials/header.scss' as *;
+  @use 'src/assets/scss/partials/buttons.scss' as *;
+  @use 'src/assets/scss/partials/variables.scss' as *;
 </style>

@@ -9,18 +9,15 @@
         padding: 10px;
 
         &:hover {
+            font-weight: 500;
             color: #f86011;
         }
 
         &.active {
+            font-weight: 500;
             color: #f86011;
             border-bottom: 1px solid #f86011;
         }
-    }
-
-    & .header-button {
-        color: #f86011;
-        background-color: #FFE7DA
     }
 
     & .logo {

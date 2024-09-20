@@ -1,0 +1,44 @@
+.jumbotron {
+    background-image: url('img/marketing-intro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 450px;
+    padding-top: 55px;
+
+    & .myCard {
+        max-width: 350px;
+        padding: 25px;
+        padding-bottom: 15px;
+        background-color: white;
+        border-radius: 15px;
+        text-align: center;
+
+        & img {
+            width: 70px;
+        }
+
+        & label {
+
+            &.name-label {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        & button {
+            width: 100%;
+        }
+
+        & .card_declaration {
+            margin-top: 10px;
+            font-size: 0.7rem;
+        }
+
+        & .phone-number {
+            color: #f86011;
+        }
+    }
+}

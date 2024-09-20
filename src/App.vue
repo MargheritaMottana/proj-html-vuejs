@@ -20,7 +20,7 @@
 
 <template>
 
-	<div class="container">
+	<div>
 		<!-- header -->
 		<section>
 			<PageHeader />
