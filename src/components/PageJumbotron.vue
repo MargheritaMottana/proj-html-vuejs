@@ -16,66 +16,70 @@
 
     <div class="jumbotron">
 
-        <div class="container my-container">
+        <div class="container">
 
-            <div class="row">
-                <!-- titolo -->
-                <div class="col text-white">
-                    <h1 class="fw-bold mb-3">
-                        {{title}}
-                    </h1>
-                    <p class="fs-5 mb-4">
-                        {{ message }}
-                    </p>
-                    <button type="button" class="btn white-button">
-                        {{ button }} <i class="fa-solid fa-arrow-right ms-1"></i>
-                    </button>
-                </div>
+            <div class="my-container">
 
-                <!-- card -->
-                <div class="col">
-                    <form class="myCard shadow-lg">
-                        <!-- foto -->
-                         <img src="/public/img/marketing-consultant-expert.jpg" alt="Richard Madsen" class="rounded-circle mb-2">
-                         <p class="fs-5 mb-2">
-                            Richard Madsen
-                         </p>
-                         <p class="text-secondary font-small">
-                            Marketing Consultant Expert
-                         </p>
-                         <p class="phone-number">
-                            <i class="fa-solid fa-phone"></i> (555) 802-1234
-                         </p>
-
-                        <!-- input form -->
-                        <div class="form-floating mb-3 mt-3">
-                            <input type="name" class="form-control" id="floatingInput" placeholder="Nome Cognome" required>
-                            <label for="floatingInput" class="text-secondary name-label font-small">
-                                Your Name* <i class="fa-regular fa-id-badge"></i>
-                            </label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                            <label for="floatingInput" class="text-secondary font-small">
-                                Your Email*
-                            </label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                            <label for="floatingInput" class="text-secondary font-small">
-                                Your Phone Number*
-                            </label>
-                        </div>
-
-                        <!-- bottone form -->
-                        <button type="submit" class="btn orange-button">Get a Callback</button>
-
-                        <!-- agree -->
-                        <p class="text-secondary card_declaration">
-                            {{ card_declaration }}
+                <div class="row">
+                    <!-- titolo -->
+                    <div class="col text-white">
+                        <h1 class="fw-bold mb-3">
+                            {{title}}
+                        </h1>
+                        <p class="fs-5 mb-4">
+                            {{ message }}
                         </p>
-                    </form>
+                        <button type="button" class="button white-button">
+                            {{ button }} <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </button>
+                    </div>
+
+                    <!-- card -->
+                    <div class="col">
+                        <form class="myCard shadow-lg">
+                            <!-- foto -->
+                            <img src="/public/img/marketing-consultant-expert.jpg" alt="Richard Madsen" class="rounded-circle mb-2">
+                            <p class="fs-5 mb-2">
+                                Richard Madsen
+                            </p>
+                            <p class="text-secondary font-small">
+                                Marketing Consultant Expert
+                            </p>
+                            <p class="phone-number">
+                                <i class="fa-solid fa-phone"></i> (555) 802-1234
+                            </p>
+
+                            <!-- input form -->
+                            <div class="form-floating mb-3 mt-3">
+                                <input type="name" class="form-control" id="floatingInput" placeholder="Nome" required>
+                                <label for="floatingInput" class="text-secondary name-label font-small">
+                                    Your Name* <i class="fa-regular fa-id-badge"></i>
+                                </label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                                <label for="floatingInput" class="text-secondary font-small">
+                                    Your Email*
+                                </label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+                                <label for="floatingInput" class="text-secondary font-small">
+                                    Your Phone Number*
+                                </label>
+                            </div>
+
+                            <!-- bottone form -->
+                            <button type="submit" class="button orange-button">Get a Callback</button>
+
+                            <!-- agree -->
+                            <p class="text-secondary card_declaration">
+                                {{ card_declaration }}
+                            </p>
+                        </form>
+                    </div>
                 </div>
+
             </div>
 
         </div>
@@ -84,7 +88,7 @@
 </template>
 
 <style lang="scss">
-  @use 'src/assets/scss/partials/jumbotron.scss' as *;
+  @use 'src/assets/scss/partials/page_jumbotron.scss' as *;
   @use 'src/assets/scss/partials/buttons.scss' as *;
   @use 'src/assets/scss/partials/variables.scss' as *;
 </style>

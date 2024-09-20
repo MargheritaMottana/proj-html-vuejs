@@ -1,11 +1,12 @@
-.btn {
-    padding: 10px 25px;
+.button {
+    padding: 10px 35px;
     font-size: small;
     text-align: center;
     border: 2px solid transparent;
+    border-radius: 7px;
 }
 
-.btn.light-orange-button {
+.button.light-orange-button {
     color: #f86011;
     background-color: #FFE7DA;
 
@@ -15,7 +16,7 @@
     }
 }
 
-.btn.white-button {
+.button.white-button {
     color: black;
     background-color: #ffffff;
 
@@ -26,7 +27,7 @@
     }
 }
 
-.btn.orange-button {
+.button.orange-button {
     color: white;
     background-color: #f86011;
 

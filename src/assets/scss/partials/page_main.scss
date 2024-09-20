@@ -1,0 +1,11 @@
+.content {
+    padding: 150px 0;
+
+    & .content-img {
+        max-width: 500px;
+    }
+
+    & .scope-img {
+        max-width: 40px;
+    }
+}
