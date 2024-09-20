@@ -1,5 +1,16 @@
+.my-container .content:first-child {
+    padding-top: 100px;
+}
+
+.my-container .content:nth-child(even) {
+    flex-direction: row-reverse;
+
+    & .col {
+        text-align: end;
+    }
+}
+
 .content {
-    padding: 150px 0;
 
     & .content-img {
         max-width: 500px;

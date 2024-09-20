@@ -38,10 +38,11 @@
 
     <div class="container">
 		<div class="my-container">
-			<section class="row content" v-for="(content, i) in contents" :key="i">
 
+			<section class="row align-items-center justify-content-between content" v-for="(content, i) in contents" :key="i">
+
+				<!-- imagine -->
 				<div class="col">
-					<!-- imagine -->
 					<img :src="content.image" :alt="content.title" class="content-img">
 				</div>
 				
@@ -70,6 +71,7 @@
 				</div>
 
 			</section>
+
 		</div>
     </div>
     
