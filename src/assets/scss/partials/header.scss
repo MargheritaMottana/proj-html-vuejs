@@ -1,0 +1,29 @@
+.nav {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .nav-link {
+        color: #5f5f5f;
+        padding: 10px;
+
+        &:hover {
+            color: #f86011;
+        }
+
+        &.active {
+            color: #f86011;
+            border-bottom: 1px solid #f86011;
+        }
+    }
+
+    & .header-button {
+        color: #f86011;
+        background-color: #FFE7DA
+    }
+
+    & .logo {
+        width: 200px;
+    }
+}

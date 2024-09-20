@@ -2,15 +2,16 @@
 	import PageHeader from './components/PageHeader.vue';
 	import PageMain from './components/PageMain.vue';
 	import PageFooter from './components/PageFooter.vue';
+	import PageJumbotron from './components/PageJumbotron.vue';
 
   	export default {
 		data() {
 		 return { 
-		   message: 'Hello from App'
 		  }
 	   },
 	   components:{
 	  		PageHeader,
+			PageJumbotron,
 			PageMain,
 			PageFooter,
 		},
@@ -19,27 +20,24 @@
 
 <template>
 
-	<!-- app -->
-	<div>
-		<p class="text-primary">
-			{{ message }}
-		</p>
+	<div class="container">
+		<!-- header -->
+		<section>
+			<PageHeader />
+			<PageJumbotron />
+		</section>
+
+		<!-- main -->
+		<section>
+			<PageMain />
+		</section>
+
+		<!-- footer -->
+		<section>
+			<PageFooter />
+		</section>
+
 	</div>
-
-	<!-- header -->
-	<section>
-		<PageHeader />
-	</section>
-
-	<!-- main -->
-	<section>
-		<PageMain />
-	</section>
-
-	<!-- footer -->
-	<section>
-		<PageFooter />
-	</section>
 
 </template>
 

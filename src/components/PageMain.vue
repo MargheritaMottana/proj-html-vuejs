@@ -12,7 +12,7 @@
 
     <div>
         <p>
-            {{ message }}
+
         </p>
     </div>
     
