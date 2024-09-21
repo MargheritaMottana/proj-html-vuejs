@@ -5,7 +5,6 @@
             title: 'Unlock Your Online Growth Potential',
             message: 'Online marketing to secure customer retention, leads, and sales. We focus on the bigger picture.',
             button: 'Our service',
-
             card_declaration: 'By submitting my data I agree to be contacted'
 	      }
 	   },
