@@ -39,7 +39,7 @@
     <div class="container">
 		<div class="my-container">
 
-			<section class="row align-items-center justify-content-between content" v-for="(content, i) in contents" :key="i">
+			<section class="row align-items-center content" v-for="(content, i) in contents" :key="i">
 
 				<!-- imagine -->
 				<div class="col">

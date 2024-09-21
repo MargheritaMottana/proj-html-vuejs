@@ -37,7 +37,7 @@
                     <div class="col">
                         <form class="myCard shadow-lg">
                             <!-- foto -->
-                            <img src="/public/img/marketing-consultant-expert.jpg" alt="Richard Madsen" class="rounded-circle mb-2">
+                            <img src="/public/img/experts/marketing-consultant-expert.jpg" alt="Richard Madsen" class="pro-pic rounded-circle mb-2">
                             <p class="fs-5 mb-2">
                                 Richard Madsen
                             </p>

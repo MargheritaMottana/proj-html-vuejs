@@ -1,22 +1,42 @@
-.my-container .content:first-child {
-    padding-top: 100px;
-}
+// main 1
 
-.my-container .content:nth-child(even) {
-    flex-direction: row-reverse;
+.my-container {
 
-    & .col {
-        text-align: end;
+    .content {
+
+        & .content-img {
+            max-width: 500px;
+        }
+
+        & .scope-img {
+            max-width: 40px;
+        }
+
+        &:first-child {
+            padding-top: 100px;
+        }
+
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+
+            & .col {
+                text-align: end;
+            }
+        }
+
+        &:last-child {
+            padding-bottom: 100px;
+        }
     }
 }
 
-.content {
+// main 2
 
-    & .content-img {
-        max-width: 500px;
-    }
+.brands {
+    max-width: 100px;
+}
 
-    & .scope-img {
-        max-width: 40px;
-    }
+// main 3
+.cta-container {
+    margin-bottom: 150px;
 }
