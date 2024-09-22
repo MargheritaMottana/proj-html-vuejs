@@ -14,7 +14,7 @@
 
 <template>
         <div class="container pt-5">
-            <div class="my-container py-5">
+            <div class="my-container py-5 mb-5">
                 <div class="row align-items-center justify-content-between">
 
                     <!-- immagine -->

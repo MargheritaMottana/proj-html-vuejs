@@ -54,7 +54,7 @@
                     </div>
                     <!-- testi -->
                     <div class="case-studies text-start">
-                        <p class="fs-5 mb-5">
+                        <p :href="card.url" class="fs-5 mb-5">
                             {{ card.text }}
                         </p>
                         <h3 class="fw-bold">
