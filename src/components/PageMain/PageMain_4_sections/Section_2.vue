@@ -43,9 +43,9 @@
                     <div class="col-5">
 
                         <div v-for="(p, i) in paragraphs" :key="i" class="py-4">
-                            <h4 class=" fs-4 pb-2">
+                            <h3 class="pb-2">
                                 {{ p.title }}
-                            </h4>
+                            </h3>
                             <div>
                                 {{ p.text }}
                             </div>

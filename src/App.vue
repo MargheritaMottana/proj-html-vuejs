@@ -4,6 +4,7 @@
 	import PageMain_2 from './components/PageMain/PageMain_2.vue';
 	import PageMain_3 from './components/PageMain/PageMain_3.vue';
 	import PageMain_4 from './components/PageMain/PageMain_4.vue';
+	import PageMain_5 from './components/PageMain/PageMain_5.vue';
 	import PageFooter from './components/PageFooter.vue';
 	import PageJumbotron from './components/PageJumbotron.vue';
 
@@ -19,6 +20,7 @@
 			PageMain_2,
 			PageMain_3,
 			PageMain_4,
+			PageMain_5,
 			PageFooter,
 		},
 	 }
@@ -39,6 +41,7 @@
 			<PageMain_2 />
 			<PageMain_3 />
 			<PageMain_4 />
+			<PageMain_5 />
 		</section>
 
 		<!-- footer -->

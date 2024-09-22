@@ -35,9 +35,9 @@
             <div class="my-container text-center">
 
                 <!-- titolo sezione -->
-                <h4 class="fs-4 pb-3">
+                <h3 class="pb-3">
                     {{ title }}
-                </h4>
+                </h3>
 
                 <!-- icone + testo -->
                 <div class="row justify-content-between">
