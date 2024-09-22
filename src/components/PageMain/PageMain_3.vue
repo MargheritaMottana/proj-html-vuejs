@@ -37,7 +37,7 @@
 
 <template>
 
-    <div class="container">
+    <div class="container mb-5">
         <!-- titolo e descizione -->
         <div class="my-container text-center">
             <h2 class="fw-bold pb-5">

@@ -5,7 +5,7 @@
 			contents: [
 				{
 					image : '/img/svg/img1.svg',
-					icon: '/img/main_icon/icona1.png',
+					icon: '/img/main_icon/main_1/icona1.png',
 					scope : 'Business Growth',
 					title : 'Increase Brand Awareness',
 					text : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dignissimos assumenda, laboriosam iusto in nisi eos repudiandae ullam!',
@@ -13,7 +13,7 @@
 				},
 				{
 					image : '/img/svg/img2.svg',
-					icon: '/img/main_icon/icona2.png',
+					icon: '/img/main_icon/main_1/icona2.png',
 					scope : 'Investors In People',
 					title : 'In-House Sales Training',
 					text : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dignissimos assumenda, laboriosam iusto in nisi eos repudiandae ullam!',
@@ -21,7 +21,7 @@
 				},
 				{
 					image : '/img/svg/img3.svg',
-					icon: '/img/main_icon/icona3.png',
+					icon: '/img/main_icon/main_1/icona3.png',
 					scope : 'Social Media Analysis',
 					title : 'Harness Your Social Proof',
 					text : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dignissimos assumenda, laboriosam iusto in nisi eos repudiandae ullam!',

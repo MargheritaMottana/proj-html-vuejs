@@ -5,7 +5,7 @@
             title: 'Unlock Your Online Growth Potential',
             message: 'Online marketing to secure customer retention, leads, and sales. We focus on the bigger picture.',
             button: 'Our service',
-            
+
             card:{
                 img: '/img/experts/marketing-consultant-expert.jpg',
                 name: 'Richard Madsen',
@@ -83,8 +83,8 @@
                                 {{ card.button }}
                             </button>
 
-                            <!-- agree -->
-                            <p class="text-secondary card_declaration">
+                            <!-- terms -->
+                            <p class="text-secondary card_terms">
                                 {{ card.terms }}
                             </p>
                         </form>
