@@ -5,7 +5,16 @@
             title: 'Unlock Your Online Growth Potential',
             message: 'Online marketing to secure customer retention, leads, and sales. We focus on the bigger picture.',
             button: 'Our service',
-            card_declaration: 'By submitting my data I agree to be contacted'
+            
+            card:{
+                img: '/img/experts/marketing-consultant-expert.jpg',
+                name: 'Richard Madsen',
+                alt: 'Richard Madsen', 
+                role: 'Marketing Consultant Expert',         
+                number: '(555) 802-1234',
+                terms: 'By submitting my data I agree to be contacted',
+                button: 'Get a Callback',
+            },
 	      }
 	   },
 	 }
@@ -37,15 +46,16 @@
                     <div class="col">
                         <form class="myCard shadow-lg">
                             <!-- foto -->
-                            <img src="/public/img/experts/marketing-consultant-expert.jpg" alt="Richard Madsen" class="pro-pic rounded-circle mb-2">
+                            <img :src="card.img" :alt="card.alt" class="pro-pic rounded-circle mb-2">
                             <p class="fs-5 mb-2">
-                                Richard Madsen
+                                {{ card.name }}
                             </p>
                             <p class="text-secondary font-small">
-                                Marketing Consultant Expert
+                                {{ card.role }}
                             </p>
                             <p class="phone-number">
-                                <i class="fa-solid fa-phone"></i> (555) 802-1234
+                                <i class="fa-solid fa-phone"></i> 
+                                {{ card.number }}
                             </p>
 
                             <!-- input form -->
@@ -69,11 +79,13 @@
                             </div>
 
                             <!-- bottone form -->
-                            <button type="submit" class="button orange-button">Get a Callback</button>
+                            <button type="submit" class="button orange-button">
+                                {{ card.button }}
+                            </button>
 
                             <!-- agree -->
                             <p class="text-secondary card_declaration">
-                                {{ card_declaration }}
+                                {{ card.terms }}
                             </p>
                         </form>
                     </div>
