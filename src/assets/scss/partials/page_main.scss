@@ -66,3 +66,23 @@
         }
     }
 }
+
+// main 4
+
+img {
+    &.award {
+        width: 150px;
+    }
+
+    &[src*="award-a"] {
+        filter: invert(100%);
+    }
+
+    &[src*="award-c"] {
+        filter: hue-rotate(335deg) saturate(150%);
+    }
+
+    &[src*="award-d"] {
+        filter: hue-rotate(220deg) saturate(150%);
+    }
+}

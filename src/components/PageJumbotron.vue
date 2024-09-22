@@ -15,6 +15,12 @@
                 terms: 'By submitting my data I agree to be contacted',
                 button: 'Get a Callback',
             },
+
+            input:{
+              name: 'Your Name*' ,
+              email: 'Your Email*',
+              phone: 'Your Phone Number',
+            },
 	      }
 	   },
 	 }
@@ -62,19 +68,19 @@
                             <div class="form-floating mb-3 mt-3">
                                 <input type="name" class="form-control" id="floatingInput" placeholder="Nome" required>
                                 <label for="floatingInput" class="text-secondary name-label font-small">
-                                    Your Name* <i class="fa-regular fa-id-badge"></i>
+                                    {{ input.name }} <i class="fa-regular fa-id-badge"></i>
                                 </label>
                             </div>
                             <div class="form-floating mb-3">
                                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
                                 <label for="floatingInput" class="text-secondary font-small">
-                                    Your Email*
+                                    {{ input.email }}
                                 </label>
                             </div>
                             <div class="form-floating mb-3">
                                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
                                 <label for="floatingInput" class="text-secondary font-small">
-                                    Your Phone Number*
+                                    {{ input.phone }}
                                 </label>
                             </div>
 

@@ -2,31 +2,27 @@
   export default {
 	    data() {
 	     return { 
-            paragraphs:[
-                {
-                    title: 'We Build Relationships',
-                    text: 'Perspiciatis, modi nobis? Eaque modi similique libero possimus repellat perferendis id delectus.',
-                },
-                {
-                    title: 'Proprietary Processes',
-                    text: 'Perspiciatis, modi nobis? Eaque modi similique libero possimus repellat perferendis id delectus.',
-                }
-            ],
+            title: 'Awards',
             icons:[
                 {
-                    img: '/img/main_icon/main_4_s2/image (2).png',
-                    title: 'Accountability',
-                    text: 'Curabitur ac leo nunc vestibulum',
+                    img: '/img/main_icon/main_4_s3/award-a.png',
+                    title: 'award',
+                    text: 'Winner Seo Master MAGT Smart Start Award 2017',
                 },
                 {
-                    img: '/img/main_icon/main_4_s2/image (3).png',
-                    title: 'Transparency',
-                    text: 'Curabitur ac leo nunc vestibulum',
+                    img: '/img/main_icon/main_4_s3/award-b.png',
+                    title: 'award',
+                    text: 'Top Social Media Agencies Next Partner 2018',
                 },
                 {
-                    img: '/img/main_icon/main_4_s2/image (4).png',
-                    title: 'Investment',
-                    text: 'Curabitur ac leo nunc vestibulum',
+                    img: '/img/main_icon/main_4_s3/award-c.png',
+                    title: 'award',
+                    text: '10 Fastest Growing Abstract Solution Providers 2019',
+                },
+                {
+                    img: '/img/main_icon/main_4_s3/award-d.png',
+                    title: 'award',
+                    text: 'National Excellence Agencie Award Winner 2020',
                 },
             ]
 	      }
@@ -35,44 +31,28 @@
 </script>
 
 <template>
-        <div class="container pt-5">
-            <div class="my-container">
-                <div class="row align-items-center justify-content-between">
+        <div class="container py-5">
+            <div class="my-container text-center">
 
-                    <!-- paragrafi -->
-                    <div class="col-5">
+                <!-- titolo sezione -->
+                <h4 class="fs-4 pb-3">
+                    {{ title }}
+                </h4>
 
-                        <div v-for="(p, i) in paragraphs" :key="i" class="py-4">
-                            <h4 class=" fs-4 pb-2">
-                                {{ p.title }}
-                            </h4>
-                            <div>
-                                {{ p.text }}
-                            </div>
-                        </div>
-
-                    </div>
+                <!-- icone + testo -->
+                <div class="row justify-content-between">
                     
-                    <!-- icone + testo -->
-                    <div class="col-6">
+                    <div class="col" v-for="(icon, i) in icons" :key="i">
 
-                        <div v-for="(icon, i) in icons" :key="i" class="d-flex align-items-center py-3">
-
-                            <img :src="icon.img" :alt="icon.title" class="me-3">
-                            <!-- testi -->
-                            <div>
-                                <h5 class="mb-3">
-                                    {{ icon.title }}
-                                </h5>
-                                <div>
-                                    {{ icon.text }}
-                                </div>
-                            </div>
-                
+                        <img :src="icon.img" :alt="icon.title" class="award">
+                        <div>
+                            {{ icon.text }}
                         </div>
 
                     </div>
+
                 </div>
+
             </div>
         </div>
 </template>
