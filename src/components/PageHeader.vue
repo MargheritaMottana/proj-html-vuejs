@@ -49,27 +49,32 @@
                 {
                     title: 'Why Us',
                     url: '#',
-                    active: false
+                    active: false,
+                    dropDown: null
                 },
                 {
                     title: 'Case Studies',
                     url: '#',
-                    active: false
+                    active: false,
+                    dropDown: null
                 },
                 {
                     title: 'About',
                     url: '#',
-                    active: false
+                    active: false,
+                    dropDown: null
                 },
                 {
                     title: 'Blog',
                     url: '#',
-                    active: false
+                    active: false,
+                    dropDown: null
                 },
                 {
                     title:'(555) 802-1234',
                     url: '#',
-                    active: false
+                    active: false,
+                    dropDown: null
                 },
             ],
             activeLink: 0,
@@ -106,7 +111,7 @@
                         {{ link.title }}
                     </a>
 
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" v-if="link.dropDown != null">
                         <li v-for="(dropLink, j) in link.dropDown" :key="j">
                             <a class="dropdown-item font-small" :href="dropLink.dropurl">
                                 {{ dropLink.text }}
