@@ -1,0 +1,31 @@
+.myCard {
+    max-width: 350px;
+    padding: 25px;
+    padding-bottom: 15px;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+
+    & label {
+
+        &.name-label {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    & button {
+        width: 100%;
+    }
+
+    & .card_terms {
+        margin-top: 10px;
+        font-size: 0.7rem;
+    }
+
+    & .phone-number {
+        color: #f86011;
+    }
+}

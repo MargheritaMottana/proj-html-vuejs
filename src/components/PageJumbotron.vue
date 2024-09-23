@@ -1,29 +1,18 @@
 <script >
+
+    import card from './Partials/card.vue';
+
   export default {
 	    data() {
 	     return { 
             title: 'Unlock Your Online Growth Potential',
             message: 'Online marketing to secure customer retention, leads, and sales. We focus on the bigger picture.',
             button: 'Our service',
-
-            card:{
-                img: '/img/experts/marketing-consultant-expert.jpg',
-                name: 'Richard Madsen',
-                alt: 'Richard Madsen', 
-                role: 'Marketing Consultant Expert',
-                iconNumber: '<i class="fa-solid fa-phone"></i>',     
-                number: '(555) 802-1234',
-                terms: 'By submitting my data I agree to be contacted',
-                button: 'Get a Callback',
-            },
-
-            input:{
-              name: 'Your Name*' ,
-              email: 'Your Email*',
-              phone: 'Your Phone Number',
-            },
 	      }
 	   },
+       components:{
+            card,
+       }
 	 }
 </script>
 
@@ -39,7 +28,7 @@
                     <!-- titolo -->
                     <div class="col text-white">
                         <h1 class="fw-bold mb-3">
-                            {{title}}
+                            {{ title }}
                         </h1>
                         <p class="fs-5 mb-4">
                             {{ message }}
@@ -50,53 +39,8 @@
                     </div>
 
                     <!-- card -->
-                    <div class="col">
-                        <form class="myCard shadow-lg">
-                            <!-- foto -->
-                            <img :src="card.img" :alt="card.alt" class="pro-pic rounded-circle mb-2">
-                            <p class="fs-5 mb-2">
-                                {{ card.name }}
-                            </p>
-                            <p class="text-secondary font-small">
-                                {{ card.role }}
-                            </p>
-                            <p class="phone-number">
-                                <!-- v-html per utilizzare tag html dai data -->
-                                <span v-html="card.iconNumber"></span>
-                                {{ card.number }}
-                            </p>
-                            
-
-                            <!-- input form -->
-                            <div class="form-floating mb-3 mt-3">
-                                <input type="name" class="form-control" id="floatingInput" placeholder="Nome" required>
-                                <label for="floatingInput" class="text-secondary name-label font-small">
-                                    {{ input.name }} <i class="fa-regular fa-id-badge"></i>
-                                </label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                                <label for="floatingInput" class="text-secondary font-small">
-                                    {{ input.email }}
-                                </label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-                                <label for="floatingInput" class="text-secondary font-small">
-                                    {{ input.phone }}
-                                </label>
-                            </div>
-
-                            <!-- bottone form -->
-                            <button type="submit" class="button orange-button">
-                                {{ card.button }}
-                            </button>
-
-                            <!-- terms -->
-                            <p class="text-secondary card_terms">
-                                {{ card.terms }}
-                            </p>
-                        </form>
+                    <div class="col d-flex justify-content-center">
+                        <card/>
                     </div>
                 </div>
 
