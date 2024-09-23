@@ -16,7 +16,7 @@
             input:{
               name: 'Your Name*' ,
               email: 'Your Email*',
-              phone: 'Your Phone Number',
+              phone: 'Your Phone Number*',
             },
 	      }
 	   },
@@ -43,20 +43,20 @@
 
         <!-- input form -->
         <div class="form-floating mb-3 mt-3">
-            <input type="name" class="form-control" id="floatingInput" placeholder="Nome" required>
-            <label for="floatingInput" class="text-secondary name-label font-small">
+            <input type="text" class="form-control" id="floatingTextarea" placeholder="Nome" required>
+            <label for="floatingTextarea" class="text-secondary name-label font-small">
                 {{ input.name }} <i class="fa-regular fa-id-badge"></i>
             </label>
         </div>
         <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
+            <input type="email" class="form-control" id="floatingInput" placeholder="nome@esempio.com" required>
             <label for="floatingInput" class="text-secondary font-small">
                 {{ input.email }}
             </label>
         </div>
         <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
-            <label for="floatingInput" class="text-secondary font-small">
+            <input type="number" class="form-control" id="floatingNumber" placeholder="333 1234 567" required>
+            <label for="floatingNumber" class="text-secondary font-small">
                 {{ input.phone }}
             </label>
         </div>

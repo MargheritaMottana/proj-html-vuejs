@@ -1,7 +1,29 @@
 footer {
     padding: 100px 0;
-}
 
-hr {
-    width: 100px;
+    & hr {
+        width: 100px;
+    }
+
+    & ul {
+        list-style: none;
+
+        & a.myLink {
+            display: block;
+            padding: 5px;
+            padding-left: 0;
+            color: #5f5f5f;
+            text-decoration: none;
+
+            &:hover {
+                color: #f86011;
+            }
+
+            &.active {
+                color: #f86011;
+                border-bottom: 1px solid #f86011;
+            }
+        }
+    }
+
 }

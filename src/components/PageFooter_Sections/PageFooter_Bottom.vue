@@ -2,135 +2,151 @@
   export default {
 	    data() {
 	     return { 
-            logo: {
-                img: '/img/avada-marketing-logo.png',
-                azienda: 'Avada Marketing',
-                url: '#',
+
+            cta:{
+                title: 'Grow Your Online Business Strategically, and Improve Customer Retention.',
             },
-            links: [
+
+            sections:{
+                Services: 'Services',
+                Resources: 'Resources',
+                Company: 'Company',
+            },
+            servicesLinks: [
                 {
-                    title: 'Home',
-                    url: '#',
-                    active: true,
-                    dropDown:[
-                        {
-                            text: "Hello ( ˘ ³˘)♥",
-                            dropurl: '#'
-                        },
-                        {
-                            text: "I'm something ʕ •ᴥ•ʔ",
-                            dropurl: '#'
-                        },
-                        {
-                            text: "I'm Something else ૮꒰ ˶• ༝ •˶꒱ა",
-                            dropurl: '#'
-                        },
-                    ]                    
+                    title: 'Marketing Plan',
+                    url: '#',               
                 },
                 {
-                    title: 'Services',
-                    url: '#',
-                    active: false,
-                    dropDown:[
-                        {
-                            text: "Hello ( ˘ ³˘)♥",
-                            dropurl: '#'
-                        },
-                        {
-                            text: "I'm something ʕ •ᴥ•ʔ",
-                            dropurl: '#'
-                        },
-                        {
-                            text: "I'm Something else ૮꒰ ˶• ༝ •˶꒱ა",
-                            dropurl: '#'
-                        },
-                    ]   
+                    title: 'Sales Development',
+                    url: '#',               
+                },
+                {
+                    title: 'Digital Marketing',
+                    url: '#',               
+                },
+                {
+                    title: 'Pricing',
+                    url: '#',               
                 },
                 {
                     title: 'Why Us',
-                    url: '#',
-                    active: false,
-                    dropDown: null
+                    url: '#',               
                 },
                 {
-                    title: 'Case Studies',
-                    url: '#',
-                    active: false,
-                    dropDown: null
+                    title: 'Cases Studies',
+                    url: '#',               
+                },
+            ],
+            ResourcesLinks: [
+                {
+                    title: 'Learning Center',
+                    url: '#',               
                 },
                 {
-                    title: 'About',
-                    url: '#',
-                    active: false,
-                    dropDown: null
+                    title: 'Video Tutorials',
+                    url: '#',               
+                },
+                {
+                    title: 'Customers',
+                    url: '#',               
                 },
                 {
                     title: 'Blog',
-                    url: '#',
-                    active: false,
-                    dropDown: null
-                },
-                {
-                    title:'(555) 802-1234',
-                    url: '#',
-                    active: false,
-                    dropDown: null
+                    url: '#',               
                 },
             ],
-            activeLink: 0,
-            button: 'Free Quote',
+            CompanyLinks: [
+                {
+                    title: 'Who We Are',
+                    url: '#',               
+                },
+                {
+                    title: 'Contact Us',
+                    url: '#',               
+                },
+                {
+                    title: 'Careers',
+                    url: '#',               
+                },
+            ],
+            contacts: {
+                info: '© 2020 · Avada Consultant · Powered by WordPress',
+                number: 'Call Us (555)802-1234',
+                email: 'info@yourcompany.com'
+            }
 	      }
 	   },
 	 }
 </script>
 
 <template>
-    <header class="container">
+    <footer class="container">
         <div class="my-container">
 
-            <ul class="nav">
-
-                <!-- logo -->
-                <a class="nav-item" :href="logo.url">
-                    <img class="logo" :src="logo.img" :alt="logo.azienda">
-                </a>
-
-                <!-- menu -->
-                <!-- Ciclo per leggere tutti i link nell'array -->
-                <li class="nav-item" v-for="(link, i) in links" :key="i">
-                    <!-- 
-                    Al clicl cambia l'indice del link attivo e si aggiunge la classe active 
-                    Mostra il dropdown solo se esiste il dropdonw all'interno di link
-                    -->
-                    <a @click="activeLink = i"
-                        :class="{
-                            'active' : i == activeLink,
-                            'dropdown-toggle' : link.dropDown
-                        }" 
-                        class="nav-link" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page" :href="link.url">
-                        {{ link.title }}
-                    </a>
-
-                    <ul class="dropdown-menu" v-if="link.dropDown != null">
-                        <li v-for="(dropLink, j) in link.dropDown" :key="j">
-                            <a class="dropdown-item font-small" :href="dropLink.dropurl">
-                                {{ dropLink.text }}
+            <div class="row justify-content-between mb-5">
+                <h4 class="col-4">
+                    {{ cta.title }}
+                </h4>
+                
+                <!-- sezione link 1 -->
+                <div class="col-2">
+                    <div class="font-small fw-bold mb-3">
+                        {{ sections.Services }}
+                    </div>
+                    <ul class="ps-0">
+                        <li v-for="(link, i) in servicesLinks" :key="i">
+                            <a class="myLink font-small" :href="link.url">
+                                {{ link.title }}
                             </a>
                         </li>
                     </ul>
-                </li>
-
-                <!-- bottone finale -->
-                <div class="nav-item">
-                    <button type="button" class="button light-orange-button">
-                        {{ button }}
-                    </button>
                 </div>
 
-            </ul>
+                <!-- sezione link 2 -->
+                <div class="col-2">
+                    <div class="font-small fw-bold mb-3">
+                        {{ sections.Resources }}
+                    </div>
+                    <ul class="ps-0">
+                        <li v-for="(link, i) in ResourcesLinks" :key="i">
+                            <a class="myLink font-small" :href="link.url">
+                                {{ link.title }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- sezione link 3 -->
+                <div class="col-2">
+                    <div class="font-small fw-bold mb-3">
+                        {{ sections.Company }}
+                    </div>
+                    <ul class="ps-0">
+                        <li v-for="(link, i) in CompanyLinks" :key="i">
+                            <a class="myLink font-small" :href="link.url">
+                                {{ link.title }}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-5 font-small">
+                    {{ contacts.info }}
+                </div>
+                <div class="col font-small">
+                    {{ contacts.number }}
+                </div>
+                <div class="col font-small text-end">
+                    {{ contacts.email }}
+                </div>
+            </div>
 
         </div>
-    </header>
+    </footer>
 </template>
 
 <style lang="scss">
