@@ -10,7 +10,8 @@
                 img: '/img/experts/marketing-consultant-expert.jpg',
                 name: 'Richard Madsen',
                 alt: 'Richard Madsen', 
-                role: 'Marketing Consultant Expert',         
+                role: 'Marketing Consultant Expert',
+                iconNumber: '<i class="fa-solid fa-phone"></i>',     
                 number: '(555) 802-1234',
                 terms: 'By submitting my data I agree to be contacted',
                 button: 'Get a Callback',
@@ -60,9 +61,11 @@
                                 {{ card.role }}
                             </p>
                             <p class="phone-number">
-                                <i class="fa-solid fa-phone"></i> 
+                                <!-- v-html per utilizzare tag html dai data -->
+                                <span v-html="card.iconNumber"></span>
                                 {{ card.number }}
                             </p>
+                            
 
                             <!-- input form -->
                             <div class="form-floating mb-3 mt-3">
