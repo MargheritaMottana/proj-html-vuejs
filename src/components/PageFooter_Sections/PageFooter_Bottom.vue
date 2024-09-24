@@ -74,8 +74,8 @@
                     ]
                 },
             ],
+            copyright: '© 2020 · Avada Consultant · Powered by WordPress',
             contacts: {
-                info: '© 2020 · Avada Consultant · Powered by WordPress',
                 number: 'Call Us (555)802-1234',
                 email: 'info@yourcompany.com'
             },
@@ -88,36 +88,72 @@
     <footer class="container">
         <div class="my-container">
 
+            <!-- cta e menu -->
             <div class="row justify-content-between mb-5">
-                <h4 class="col-4">
-                    {{ cta.title }}
-                </h4>
+
+                <!-- cta & icone -->
+                 <div class="col-5">
+                    <!-- titolo -->
+                    <h4 class="mb-4">
+                      {{ cta.title }}
+                    </h4>
+
+                    <!-- icone -->
+                    <div class="d-flex">
+                        <a class="myLink social-icon me-3" href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a class="myLink social-icon me-3" href="#">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a class="myLink social-icon me-3" href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a class="myLink social-icon me-3" href="#">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a class="myLink social-icon me-3" href="#">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a class="myLink social-icon me-3" href="#">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+
+                 </div>
                 
-                <!-- sezione link 1 -->
+                <!-- link -->
                 <div class="col-2" v-for="(section, i) in menu" :key="i">
+
+                    <!-- titolo sezione -->
                     <div class="font-small fw-bold mb-3">
                         {{ section.name }}
                     </div>
+
+                    <!-- links -->
                     <ul class="ps-0">
-                        <li v-for="(link ,j) in section.links" :key="j">
+                        <li v-for="(link ,i) in section.links" :key="i">
                             <a class="myLink font-small" :href="link.url">
                                 {{ link.title }}
                             </a>
                         </li>
                     </ul>
+
                 </div>
+
             </div>
 
-            <div class="row">
+            <!-- contatti -->
+            <div class="row justify-content-between contact-container">
+
                 <div class="col-5 font-small">
-                    {{ contacts.info }}
+                    {{ copyright }}
                 </div>
-                <div class="col font-small">
-                    {{ contacts.number }}
+
+                <div class="col-3 font-small" v-for="(contact, i) in contacts" :key="i">
+                    {{ contacts[i] }}
                 </div>
-                <div class="col font-small text-end">
-                    {{ contacts.email }}
-                </div>
+
             </div>
 
         </div>
