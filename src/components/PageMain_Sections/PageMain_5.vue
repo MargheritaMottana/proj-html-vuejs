@@ -19,7 +19,7 @@
 
                     <!-- immagine -->
                     <div class="col-6">
-                        <img class="rounded-3" :src="img" :alt="alt">
+                        <img class="rounded-3 shadow" :src="img" :alt="alt">
                     </div>
 
                     <!-- testi -->

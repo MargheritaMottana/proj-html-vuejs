@@ -46,14 +46,14 @@
 
             <!-- cards -->
              <div class="row mb-5">
-                <div class="col" v-for="(card, i) in cards" :key="i">
+                <div class="col px-3" v-for="(card, i) in cards" :key="i">
                     <!-- immagine -->
-                    <div class="case-studies mb-3 img-container">
-                        <img :src="card.img" :alt="card.alt" class="case-studies">
+                    <div class="mb-3 img-container">
+                        <img :src="card.img" :alt="card.alt">
                         <a :href="card.url" class="gradient"></a>
                     </div>
                     <!-- testi -->
-                    <div class="case-studies text-start">
+                    <div class="text-start">
                         <p :href="card.url" class="fs-5 mb-5">
                             {{ card.text }}
                         </p>
