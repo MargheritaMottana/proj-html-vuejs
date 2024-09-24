@@ -31,10 +31,8 @@
 
 <template>
     <div class="bg-gray-gradient pt-5 pb-5">
-
-        <div class="container mb-5">
-
-            <div class="my-container">
+        <div class="my-container mb-5">
+            <div class="container">
 
                  <!-- titolo e bottone-->
                 <div class="row">
@@ -43,6 +41,7 @@
                     <h2 class="col-5 fw-bold pb-5">
                         {{ title }}
                     </h2>
+
                     <!-- bottone -->
                      <div class="col text-end align-self-end">
                         <button class="button orange-button mb-5">
@@ -54,24 +53,29 @@
 
                 <!-- cards -->
                 <div class="row mb-5">
+
+                    <!-- ciclo per lettura della sezione -->
                     <div class="col" v-for="(card, i) in cards" :key="i">
+
                         <!-- immagine -->
                         <div class="mb-3 img-container">
                             <img :src="card.img" :alt="card.alt" class="">
                             <a :href="card.url" class="gradient"></a>
                         </div>
+
                         <!-- testi -->
                         <div class="text-start">
                             <p :href="card.url" class="fs-5 mb-5">
                                 {{ card.text }}
                             </p>
                         </div>
+
                     </div>
+
                 </div>
 
             </div>
         </div>
-
     </div>
 </template>
 

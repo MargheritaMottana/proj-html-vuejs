@@ -45,11 +45,10 @@
 </script>
 
 <template>
+    <div class="my-container">
+        <div class="container text-center">
 
-    <div class="container">
-        <!-- titolo e descizione -->
-        <div class="my-container text-center">
-
+            <!-- titolo e descizione -->
             <h2 class="fw-bold pb-3">
                 {{ title }}
             </h2>
@@ -57,17 +56,22 @@
                 {{ text }}
             </p>
 
+            <!-- loghi brand -->
             <div class="row">
-                <!-- ciclo lettura dei brand -->
+
+                <!-- ciclo per la lettura di tutti i loghi -->
                 <div class="col py-5" v-for="(brand, i) in brands" :key="i">
                     <img class="brands" :src="brand.img" :alt="brand.alt">
                 </div>
+
             </div>
 
+            <!-- card orizzontale con esperto, cta e bottone per chiamata -->
             <div class="cta-container row d-flex align-items-center shadow-lg rounded-4 py-2 px-5">
 
                 <!-- foto - nome - ruolo -->
                 <div class="col">
+
                     <div class="d-flex align-items-center">
                         <!-- foto -->
                         <img class="me-3 rounded-circle pro-pic-small" :src="card.img" :alt="card.alt">
@@ -81,13 +85,16 @@
                             </div>
                         </div>
                     </div>
+                    
                 </div>
+
                 <!-- cta -->
                 <div class="col">
                     <div class="fw-bold">
                         {{ card.text }}
                     </div>
                 </div>
+
                 <!-- bottone numero -->
                 <div class="col text-end">
                     <button class="button light-orange-button">
@@ -98,9 +105,7 @@
             </div>
 
         </div>
-
     </div>
-    
 </template>
 
 <style lang="scss">

@@ -18,6 +18,8 @@
 
 <template>
 
+    <!-- Create le sotto sezioni per inserirle tutte all'interno dello sfondo con gradiente -->
+
     <div class="bg-gray-gradient pt-5 pb-5">
         <Section_1/>
         <Section_2/>

@@ -85,14 +85,15 @@
 </script>
 
 <template>
-    <footer class="container">
-        <div class="my-container">
+    <footer class="my-container">
+        <div class="container">
 
-            <!-- cta e menu -->
+            <!-- cta con social e menu -->
             <div class="row justify-content-between mb-5">
 
                 <!-- cta & icone -->
-                 <div class="col-5">
+                <div class="col-5">
+
                     <!-- titolo -->
                     <h4 class="mb-4">
                       {{ cta.title }}
@@ -120,9 +121,10 @@
                         </a>
                     </div>
 
-                 </div>
+                </div>
                 
                 <!-- link -->
+                <!-- ciclo per lettura sezioni -->
                 <div class="col-2" v-for="(section, i) in menu" :key="i">
 
                     <!-- titolo sezione -->
@@ -132,11 +134,14 @@
 
                     <!-- links -->
                     <ul class="ps-0">
+
+                        <!-- ciclo per lettura link -->
                         <li v-for="(link ,i) in section.links" :key="i">
                             <a class="myLink font-small" :href="link.url">
                                 {{ link.title }}
                             </a>
                         </li>
+
                     </ul>
 
                 </div>
@@ -150,6 +155,7 @@
                     {{ copyright }}
                 </div>
 
+                <!-- ciclo per lettura contatti -->
                 <div class="col-3 font-small" v-for="(contact, i) in contacts" :key="i">
                     {{ contacts[i] }}
                 </div>

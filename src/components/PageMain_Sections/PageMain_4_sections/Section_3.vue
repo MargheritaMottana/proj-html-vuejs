@@ -31,30 +31,32 @@
 </script>
 
 <template>
-        <div class="container py-5">
-            <div class="my-container text-center">
+    <div class="my-container py-5">
+        <div class="container text-center">
 
-                <!-- titolo sezione -->
-                <h3 class="pb-3">
-                    {{ title }}
-                </h3>
+            <!-- titolo sezione -->
+            <h3 class="pb-3">
+                {{ title }}
+            </h3>
 
-                <!-- icone + testo -->
-                <div class="row justify-content-between">
-                    
-                    <div class="col" v-for="(icon, i) in icons" :key="i">
+            <!-- icone + testo -->
+            <div class="row justify-content-between">
+                
+                <!-- ciclo per lettura di tutti i loghi -->
+                <div class="col" v-for="(icon, i) in icons" :key="i">
 
-                        <img :src="icon.img" :alt="icon.title" class="award">
-                        <div>
-                            {{ icon.text }}
-                        </div>
-
+                    <!-- in css cambio di colore con i filtri -->
+                    <img :src="icon.img" :alt="icon.title" class="award">
+                    <div>
+                        {{ icon.text }}
                     </div>
 
                 </div>
 
             </div>
+
         </div>
+    </div>
 </template>
 
 <style lang="scss">

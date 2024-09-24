@@ -19,13 +19,11 @@
 </script>
 
 <template>
-
     <footer class="bg-black">
+        <div class="my-container">
+            <div class="container">
 
-        <div class="container">
-
-            <div class="my-container">
-
+                <!-- testi e card -->
                 <div class="row">
 
                     <div class="col text-white">
@@ -38,8 +36,10 @@
                             {{ text }}
                         </p>
 
-                        <!-- suddivisione per citazione -->
+                        <!-- linea suddivisione -->
                         <hr class="mb-5">
+
+                        <!-- citazione -->
                         <p class="fst-italic mb-4">
                             {{ quote }}
                         </p>
@@ -52,7 +52,7 @@
 
                     </div>
 
-                    <!-- card -->
+                    <!-- card componente -->
                     <div class="col d-flex justify-content-center">
                         <card/>
                     </div>
@@ -60,9 +60,7 @@
                 </div>
 
             </div>
-
         </div>
-
     </footer>
 </template>
 

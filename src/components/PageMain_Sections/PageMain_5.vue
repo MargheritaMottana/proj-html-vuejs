@@ -13,31 +13,33 @@
 </script>
 
 <template>
-        <div class="container pt-5">
-            <div class="my-container py-5 mb-5">
-                <div class="row align-items-center justify-content-between">
+    <div class="my-container pt-5">
+        <div class="container py-5 mb-5">
 
-                    <!-- immagine -->
-                    <div class="col-6">
-                        <img class="rounded-3 shadow" :src="img" :alt="alt">
-                    </div>
+            <div class="row align-items-center justify-content-between">
 
-                    <!-- testi -->
-                    <div class="col-5">
-                        <h3 class="pb-4">
-                            {{ quote }}
-                        </h3>
-                        <div class="fw-bold mb-1">
-                            {{ name }}
-                        </div>
-                        <p class="font-small">
-                            {{ role }}
-                        </p>
-                    </div>
-
+                <!-- immagine -->
+                <div class="col-6">
+                    <img class="rounded-3 shadow" :src="img" :alt="alt">
                 </div>
+
+                <!-- testi -->
+                <div class="col-5">
+                    <h3 class="pb-4">
+                        {{ quote }}
+                    </h3>
+                    <div class="fw-bold mb-1">
+                        {{ name }}
+                    </div>
+                    <p class="font-small">
+                        {{ role }}
+                    </p>
+                </div>
+
             </div>
+            
         </div>
+    </div>
 </template>
 
 <style lang="scss">

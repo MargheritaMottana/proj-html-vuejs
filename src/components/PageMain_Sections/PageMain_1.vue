@@ -26,8 +26,7 @@
 					title : 'Harness Your Social Proof',
 					text : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dignissimos assumenda, laboriosam iusto in nisi eos repudiandae ullam!',
 					button : 'Get a Consultation'
-				},
-				
+				},	
 			],
 	      }
 	   },
@@ -35,10 +34,13 @@
 </script>
 
 <template>
+	<div class="my-container">
+		<div class="container">
 
-    <div class="container">
-		<div class="my-container">
-
+			<!-- 
+			- ciclo per leggere tutti i dati del contenuto 
+			- nel file scss viene invertita ogni riga pari (in caso se ne vogliano aggiungere altre)
+			-->
 			<section class="row align-items-center content" v-for="(content, i) in contents" :key="i">
 
 				<!-- imagine -->
@@ -48,6 +50,7 @@
 				
 				<!-- testo -->
 				<div class="col-5">
+
 					<!-- scopo -->
 					<div class="d-flex align-items-center mb-3">
 						<div>
@@ -57,11 +60,13 @@
 							{{ content.scope }}
 						</div>
 					</div>
+
 					<!-- titolo -->
 					<h2 class="fw-bold mb-4">
 						{{ content.title }}
 					</h2>
-					<!-- testo e cta -->
+
+					<!-- testo e cta-bottone -->
 					<p class="mb-4">
 						{{ content.text }}
 					</p>
@@ -73,8 +78,7 @@
 			</section>
 
 		</div>
-    </div>
-    
+    </div> 
 </template>
 
 <style lang="scss">

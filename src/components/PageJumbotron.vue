@@ -19,13 +19,12 @@
 <template>
 
     <div class="jumbotron">
-
-        <div class="container">
-
-            <div class="my-container">
+        <div class="my-container">
+            <div class="container">
 
                 <div class="row">
-                    <!-- titolo -->
+                    
+                    <!-- titolo, "motto" e bottone-->
                     <div class="col text-white">
                         <h1 class="fw-bold mb-3">
                             {{ title }}
@@ -38,17 +37,16 @@
                         </button>
                     </div>
 
-                    <!-- card -->
+                    <!-- card componente -->
                     <div class="col d-flex justify-content-center">
                         <card/>
                     </div>
                 </div>
 
             </div>
-
         </div>
-
     </div>
+    
 </template>
 
 <style lang="scss">

@@ -85,8 +85,9 @@
 </script>
 
 <template>
-    <header class="container">
-        <div class="my-container">
+
+    <header class="my-container">
+        <div class="container">
 
             <ul class="nav">
 
@@ -99,18 +100,19 @@
                 <!-- Ciclo per leggere tutti i link nell'array -->
                 <li class="nav-item" v-for="(link, i) in links" :key="i">
                     <!-- 
-                    Al clicl cambia l'indice del link attivo e si aggiunge la classe active 
-                    Mostra il dropdown solo se esiste il dropdonw all'interno di link
+                    - Al click cambia l'indice del link attivo e si aggiunge la classe active 
+                    - Mostra il dropdown solo se dropDown non ha valore null
                     -->
                     <a @click="activeLink = i"
                         :class="{
                             'active' : i == activeLink,
-                            'dropdown-toggle' : link.dropDown
+                            'dropdown-toggle' : link.dropDown != null
                         }" 
                         class="nav-link" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page" :href="link.url">
                         {{ link.title }}
                     </a>
 
+                    <!-- Mostra il dropdown menu solo se dropDown non ha valore null -->
                     <ul class="dropdown-menu" v-if="link.dropDown != null">
                         <li v-for="(dropLink, j) in link.dropDown" :key="j">
                             <a class="dropdown-item font-small" :href="dropLink.dropurl">
@@ -118,6 +120,7 @@
                             </a>
                         </li>
                     </ul>
+                    
                 </li>
 
                 <!-- bottone finale -->
@@ -128,9 +131,10 @@
                 </div>
 
             </ul>
-
         </div>
+
     </header>
+
 </template>
 
 <style lang="scss">

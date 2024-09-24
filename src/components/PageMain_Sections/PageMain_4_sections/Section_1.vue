@@ -13,30 +13,32 @@
 </script>
 
 <template>
-        <div class="container pt-5">
-            <div class="my-container">
-                <div class="row align-items-center justify-content-between">
+     <div class="my-container pt-5">
+        <div class="container">
 
-                    <!-- testi + bottone -->
-                    <div class="col-5">
-                        <h2 class="fw-bold pb-3">
-                            {{ title }}
-                        </h2>
-                        <p class="pb-3">
-                            {{ text }}
-                        </p>
-                        <button class="button orange-button mb-5">
-                            {{ button }}
-                        </button>
-                    </div>
-                    
-                    <!-- immagine -->
-                    <div class="col-6">
-                        <img class="rounded-3 shadow" :src="img" :alt="alt">
-                    </div>
+            <div class="row align-items-center justify-content-between">
+
+                <!-- testi + bottone -->
+                <div class="col-5">
+                    <h2 class="fw-bold pb-3">
+                        {{ title }}
+                    </h2>
+                    <p class="pb-3">
+                        {{ text }}
+                    </p>
+                    <button class="button orange-button mb-5">
+                        {{ button }}
+                    </button>
+                </div>
+                
+                <!-- immagine -->
+                <div class="col-6">
+                    <img class="rounded-3 shadow" :src="img" :alt="alt">
                 </div>
             </div>
+                
         </div>
+    </div>
 </template>
 
 <style lang="scss">

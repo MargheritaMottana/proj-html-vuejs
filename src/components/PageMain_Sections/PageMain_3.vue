@@ -36,22 +36,26 @@
 </script>
 
 <template>
+    <div class="my-container mb-5">
+        <div class="container text-center">
 
-    <div class="container mb-5">
-        <!-- titolo e descizione -->
-        <div class="my-container text-center">
+            <!-- titolo -->
             <h2 class="fw-bold pb-5">
                 {{ title }}
             </h2>
 
             <!-- cards -->
              <div class="row mb-5">
+
+                <!-- ciclo per lettura delle informazioni della card -->
                 <div class="col px-3" v-for="(card, i) in cards" :key="i">
+
                     <!-- immagine -->
                     <div class="mb-3 img-container">
                         <img :src="card.img" :alt="card.alt">
                         <a :href="card.url" class="gradient"></a>
                     </div>
+
                     <!-- testi -->
                     <div class="text-start">
                         <p :href="card.url" class="fs-5 mb-5">
@@ -64,16 +68,18 @@
                             {{ card.description }}
                         </div>
                     </div>
+
                 </div>
+
              </div>
 
-             <!-- bottone -->
-              <button class="button orange-button mb-5">
-                {{ button }}
-              </button>
+            <!-- bottone -->
+            <button class="button orange-button mb-5">
+            {{ button }}
+            </button>
+
         </div>
     </div>
-
 </template>
 
 <style lang="scss">
