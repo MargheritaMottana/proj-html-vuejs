@@ -2,82 +2,86 @@
   export default {
 	    data() {
 	     return { 
-
             cta:{
                 title: 'Grow Your Online Business Strategically, and Improve Customer Retention.',
             },
-
-            sections:{
-                Services: 'Services',
-                Resources: 'Resources',
-                Company: 'Company',
-            },
-            servicesLinks: [
+            menu:[
                 {
-                    title: 'Marketing Plan',
-                    url: '#',               
+                    name: 'Service',
+                    links:[
+                        {
+                            title: 'Marketing Plan',
+                            url: '#'
+                        },
+                        {
+                            title: 'Sales Development',
+                            url: '#',               
+                        },
+                        {
+                            title: 'Digital Marketing',
+                            url: '#',               
+                        },
+                        {
+                            title: 'Pricing',
+                            url: '#',               
+                        },
+                        {
+                            title: 'Why Us',
+                            url: '#',               
+                        },
+                        {
+                            title: 'Cases Studies',
+                            url: '#',               
+                        },
+                    ]
                 },
                 {
-                    title: 'Sales Development',
-                    url: '#',               
+                    name: 'Resources',
+                    links:[
+                        {
+                            title: 'Learning Center',
+                            url: '#',               
+                        },
+                        {
+                            title: 'Video Tutorials',
+                            url: '#',               
+                        },
+                        {
+                            title: 'Customers',
+                            url: '#',               
+                        },
+                        {
+                            title: 'Blog',
+                            url: '#',               
+                        },
+                    ]
                 },
                 {
-                    title: 'Digital Marketing',
-                    url: '#',               
-                },
-                {
-                    title: 'Pricing',
-                    url: '#',               
-                },
-                {
-                    title: 'Why Us',
-                    url: '#',               
-                },
-                {
-                    title: 'Cases Studies',
-                    url: '#',               
-                },
-            ],
-            ResourcesLinks: [
-                {
-                    title: 'Learning Center',
-                    url: '#',               
-                },
-                {
-                    title: 'Video Tutorials',
-                    url: '#',               
-                },
-                {
-                    title: 'Customers',
-                    url: '#',               
-                },
-                {
-                    title: 'Blog',
-                    url: '#',               
-                },
-            ],
-            CompanyLinks: [
-                {
-                    title: 'Who We Are',
-                    url: '#',               
-                },
-                {
-                    title: 'Contact Us',
-                    url: '#',               
-                },
-                {
-                    title: 'Careers',
-                    url: '#',               
+                    name: 'Company',
+                    links:[
+                        {
+                            title: 'Who We Are',
+                            url: '#',               
+                        },
+                        {
+                            title: 'Contact Us',
+                            url: '#',               
+                        },
+                        {
+                            title: 'Careers',
+                            url: '#',               
+                        },
+                    ]
                 },
             ],
             contacts: {
                 info: '© 2020 · Avada Consultant · Powered by WordPress',
                 number: 'Call Us (555)802-1234',
                 email: 'info@yourcompany.com'
-            }
-	      }
-	   },
-	 }
+            },
+          }
+        },
+    }
 </script>
 
 <template>
@@ -90,47 +94,18 @@
                 </h4>
                 
                 <!-- sezione link 1 -->
-                <div class="col-2">
+                <div class="col-2" v-for="(section, i) in menu" :key="i">
                     <div class="font-small fw-bold mb-3">
-                        {{ sections.Services }}
+                        {{ section.name }}
                     </div>
                     <ul class="ps-0">
-                        <li v-for="(link, i) in servicesLinks" :key="i">
+                        <li v-for="(link ,j) in section.links" :key="j">
                             <a class="myLink font-small" :href="link.url">
                                 {{ link.title }}
                             </a>
                         </li>
                     </ul>
                 </div>
-
-                <!-- sezione link 2 -->
-                <div class="col-2">
-                    <div class="font-small fw-bold mb-3">
-                        {{ sections.Resources }}
-                    </div>
-                    <ul class="ps-0">
-                        <li v-for="(link, i) in ResourcesLinks" :key="i">
-                            <a class="myLink font-small" :href="link.url">
-                                {{ link.title }}
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- sezione link 3 -->
-                <div class="col-2">
-                    <div class="font-small fw-bold mb-3">
-                        {{ sections.Company }}
-                    </div>
-                    <ul class="ps-0">
-                        <li v-for="(link, i) in CompanyLinks" :key="i">
-                            <a class="myLink font-small" :href="link.url">
-                                {{ link.title }}
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
             </div>
 
             <div class="row">
